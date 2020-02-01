@@ -42,7 +42,7 @@ function addTodo(toDo, id, done, trash) {
     const line = done ? line_through : "";
 
 
-    let item = `<li class="list-group-item pb-0 d-flex w-75 mx-auto">
+    let item = `<li class="list-group-item pb-0 d-flex w-md-75 w-sm-100 ">
     <i class=" fa ${Done} text-success mr-2 " job="complete" id="${id}"></i>
     <p class="text text-capitalize ${line} ">${toDo}</p>
     <i class="fa fa-trash-o text-danger ml-auto  " job="delete" id="${id}"></i>

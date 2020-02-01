@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <div class="container bg-light  pb-3 pt-3 mt-5 w-80 ">
+    <div class="container-fluid bg-light  pb-3 pt-3 mt-5 w-80 ">
         <header class=" d-flex flex-row-reverse  flex-md-row-reverse">
             <div class="clear ml-auto">
                 <button class="btn btn-success text-white "><i class="fas fa-sync-alt "></i></button>
@@ -28,13 +28,16 @@
 
         </header>
         <h1 class="text-center text-muted mt-5 display-4">Todo List</h1>
-        <div class="container bg-white  pt-3 pb-5">
-            <form id="todo_form" class="form-group  mb-3 row mx-auto w-75">
-                <input type="text" id="todo_input" placeholder="What needs to be done?" autocomplete="off" class=" form-control col mx-auto">
-                <button id="btn" type="button" class="btn  btn-success ml-1 "><i class="fas fa-plus"></i></button>
+        <div class="container  bg-white  pt-3 pb-5">
+            <form id="todo_form" class="form-group  mb-3 row mx-auto w-65 ">
+
+                <input type="text" id="todo_input" placeholder="What needs to be done?" autocomplete="off" class=" form-control col mx-auto col ">
+
+                <button id="btn" type="button" class="btn  btn-success ml-1  "><i class="fas fa-plus"></i></button>
+
             </form>
 
-            <ul id="list" class=" list-group  list-group-flush mx-auto">
+            <ul id="list" class=" list-group  list-group-flush mx-auto ">
                 <!-- <li class="list-group-item pb-0 d-flex w-75 mx-auto">
                     <i class="far fa-circle  mr-2 " job="complete" id="0"></i>
                     <p class="text-capitalize ">sleep</p>
