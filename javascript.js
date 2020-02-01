@@ -1,6 +1,6 @@
 // Select Elements 
 const list = document.getElementById("list");
-const input = document.getElementById("todo-input");
+const input = document.getElementById("todo_input");
 const clear = document.querySelector(".clear");
 const date = document.getElementById("date");
 const btn = document.getElementById("btn");
@@ -55,31 +55,39 @@ function addTodo(toDo, id, done, trash) {
 }
 
 
-//add item to the list using enter key
+//add item to the list using enter key or add button
 
-document.addEventListener("keyup", function(event) {
-    if (event.keyCode == 13) {
-        const toDo = input.value;
-        //  if input is not empty
-        if (toDo) {
-            addTodo(toDo, id, false, false);
+document.getElementById("btn").addEventListener("click", eventFunction);
 
-            listArray.push({
-                name: toDo,
-                id: id,
-                done: false,
-                trash: false
-            });
-            id++;
-        } else {
-            if (event == "") {
-                alert("you must write something");
-            }
-        }
-        input.value = "";
+document.getElementById("todo_input").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        eventFunction();
     }
-
 });
+
+//  if input is not empty
+function eventFunction() {
+
+    const toDo = input.value;
+    if (toDo) {
+        addTodo(toDo, id, false, false);
+
+        listArray.push({
+            name: toDo,
+            id: id,
+            done: false,
+            trash: false
+        });
+        id++;
+    } else // input is empty
+    {
+        if (toDo == "") {
+            alert("you must write something");
+        }
+    }
+    input.value = "";
+}
 
 // complete todo
 
