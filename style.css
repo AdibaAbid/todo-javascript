@@ -1,0 +1,32 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 75%;
+}
+
+.lineThrough {
+    text-decoration: line-through;
+}
+
+.fa-circle-thin,
+.fa-check-circle,
+.fa-trash-o {
+    font-size: 20px;
+    height: 20px;
+    margin-top: 3px;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+
+/* .fa-trash-o {
+    cursor: pointer;
+} */
+
+#date {
+    font-size: 24px;
+}
